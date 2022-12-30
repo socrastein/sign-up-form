@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <title>Sign-Up Form</title>
@@ -19,7 +19,7 @@
 
             <div class="logo-container">
                 <img src="logo.svg" id="svg">
-                <p id="hero">The<br>Lifting School</p>
+                <p id="hero">THE<br>LIFTING SCHOOL</p>
             </div>
 
         </div>
@@ -43,7 +43,7 @@
                             <label for="firstName">First Name</label>
                             <br>
                             <input id="firstName" name="firstName" type="text"
-                            pattern="[a-z] {2,}/i">
+                            pattern="[A-za-z]{2,}">
                             <br>
                             <p class="firstName, validation">Validation</p>
                         </fieldset>
@@ -51,7 +51,7 @@
                         <fieldset>
                             <label for="lastName">Last Name</label><br>
                             <input id="lastName" name="lastName" type="text"
-                            pattern="[a-z] {2,}/i">
+                            pattern="/[a-z]{2,}/i">
                             <p class="lastName, validation">Validation</p>
                         </fieldset>
 
@@ -67,7 +67,7 @@
                             <label for="phone">Phone</label>
                             <br>
                             <input id="phone" name="phone" type="tel"
-                            pattern="{7 | 10 | 11}">
+                            pattern="/{7 | 10 | 11}/">
                             <br>
                             <p class="phone, validation">Validation</p>
                         </fieldset>
@@ -76,7 +76,7 @@
                             <label for="password">Password</label>
                             <br>
                             <input id="password" name="password" type="text"
-                            pattern="{8, 15}">
+                            pattern="/{8, 15}/">
                             <br>
                             <p class="password, validation">Validation</p>
                         </fieldset>
@@ -85,7 +85,7 @@
                             <label for="password2">Confirm Password</label>
                             <br>
                             <input id="password2" type="text"
-                            pattern="{8, 15}">
+                            pattern="/{8, 15}/">
                             <br>
                             <p class="password2, validation">Validation</p>
                         </fieldset>
