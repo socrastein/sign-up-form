@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Sign-Up Form</title>
+</head>
+<body>
+    <div class="main-container">
+
+        <!-- Left Side -->
+        <div class="image-container">
+
+            <div class="logo-container">
+                <img src="logo.svg" id="svg">
+                <p id="hero">The<br>Lifting School</p>
+            </div>
+
+        </div>
+
+        <!-- Right Side -->
+        <div class="info-container">
+
+            <p class="prompt">
+                Building significant levels of strength and fitness <em>is 
+                possible.</em><br>
+                <br>
+                Let an experienced professional take care of the details;<br>
+                you supply the effort.
+                
+            </p>
+
+            <form action="index.html" method="get">
+                <fieldset id="main-form-container">
+
+                        <fieldset>
+                            <label for="firstName">First Name</label>
+                            <br>
+                            <input id="firstName" name="firstName" type="text"
+                            pattern="[a-z] {2,}/i">
+                            <br>
+                            <p class="firstName, validation">Validation</p>
+                        </fieldset>
+
+                        <fieldset>
+                            <label for="lastName">Last Name</label><br>
+                            <input id="lastName" name="lastName" type="text"
+                            pattern="[a-z] {2,}/i">
+                            <p class="lastName, validation">Validation</p>
+                        </fieldset>
+
+                        <fieldset>
+                            <label for="email">Email</label>
+                            <br>
+                            <input id="email" name="email" type="email">
+                            <br>
+                            <p class="email, validation">Validation</p>
+                        </fieldset>
+
+                        <fieldset>
+                            <label for="phone">Phone</label>
+                            <br>
+                            <input id="phone" name="phone" type="tel"
+                            pattern="{7 | 10 | 11}">
+                            <br>
+                            <p class="phone, validation">Validation</p>
+                        </fieldset>
+
+                        <fieldset>
+                            <label for="password">Password</label>
+                            <br>
+                            <input id="password" name="password" type="text"
+                            pattern="{8, 15}">
+                            <br>
+                            <p class="password, validation">Validation</p>
+                        </fieldset>
+
+                        <fieldset>
+                            <label for="password2">Confirm Password</label>
+                            <br>
+                            <input id="password2" type="text"
+                            pattern="{8, 15}">
+                            <br>
+                            <p class="password2, validation">Validation</p>
+                        </fieldset>
+
+                </fieldset>
+
+                <button type="submit">SIGN UP</button>
+            </form>
+        </div>
+    </div> 
+    
+</body>
+</html>

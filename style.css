@@ -1,0 +1,139 @@
+:root {
+    --light-background: #f5f5f5;
+    --dark-background: #333;
+    --dark-text: #333;
+    --light-text: #f5f5f5;
+    --light-purple: #ad0fd4;
+    --dark-purple: #150010;
+    --invalid-color: red;
+    --valid-color: green;
+    --focus-color: blue;
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.main-container {
+    display: flex;
+    justify-content: stretch;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+
+  /* */
+ /* Left Side */
+/* */
+.image-container {
+    background-image: linear-gradient(135deg, rgba(0,0,0), 
+    #9617b630), url('weights.JPG');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    flex-grow: 1;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 8px;
+    padding: 8px;
+    align-items: center;
+    margin-top: 40%;
+    background-image: linear-gradient(#9617b630, #150010ae 20% 80%, #9617b630);
+}
+
+#svg {
+    height: 100px;
+    width: 100px;
+    transform: scale(-1,1)
+}
+
+#hero {
+    color: var(--light-text);
+    font-size: 2rem;
+    font-family: 'Rubik Mono One', sans-serif;
+    text-align: left;
+}
+
+
+            /* */
+/* Right Side */
+          /* */
+.info-container {
+    padding: 5% 3%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+
+.prompt {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--dark-text)
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    padding: 3%;
+    gap: 0;
+}
+
+#main-form-container {
+    flex-grow: 1;
+    display: grid;
+    gap: 1rem;
+    border-style: none;
+
+}
+
+@media (min-width: 600px) {
+    #main-form-container { grid-template-columns: repeat(2, 1fr); }
+  }
+
+fieldset {
+
+}
+
+input {
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: rgba(0,0,0,1)
+}
+
+.validation {
+
+}
+
+button {
+    /* Button Styling */
+    width: max(200px, 5%);
+    height: min(3rem, 50px);
+    border-radius: 10px;
+    background-color: #150010;
+    color: var(--light-text);
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: -3px 3px var(--light-purple);
+    border-style: none;
+    margin-left: 3%;
+
+    /* Button Position */
+}
