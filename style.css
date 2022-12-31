@@ -1,13 +1,14 @@
 :root {
-    --light-background: #f5f5f5;
-    --dark-background: #333;
-    --dark-text: #333;
-    --light-text: #f5f5f5;
-    --light-purple: #ad0fd4;
-    --dark-purple: #150010;
-    --invalid-color: red;
-    --valid-color: green;
-    --focus-color: blue;
+
+    /* Custom Colors */
+    --white-smoke:      245, 245, 245;
+    --black-charcoal:   33, 33, 33;
+    --dark-magenta:     144, 0, 144;
+    --deep-purple:      68, 0, 68;
+    --green:            0, 144, 0;
+
+    /* Custom Sizing */
+    --auto-grid-min-size: 16rem; 
 }
 
 * {
@@ -22,9 +23,11 @@ body {
 .main-container {
     display: flex;
     justify-content: stretch;
+    align-items: stretch;
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
+    background-color: rgb(var(--white-smoke));
 }
 
 
@@ -32,15 +35,19 @@ body {
  /* Left Side */
 /* */
 .image-container {
-    background-image: linear-gradient(135deg, rgba(0,0,0), 
-    #9617b630), url('weights.JPG');
+    background-image: linear-gradient(135deg, rgba(var(--black-charcoal)), 
+    rgba(var(--deep-purple), .3)), url('weights.JPG');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 0;
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
+
     flex-grow: 1;
     flex-basis: 35%;
 }
@@ -49,10 +56,9 @@ body {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    padding: 8px 0;
+    padding: 3%;
     align-items: center;
-    margin-top: 100px;
-    background-image: linear-gradient(#9617b630, #150010ae 20% 80%, #9617b630);
+    background-image: linear-gradient(rgba(var(--deep-purple), .3), black 20% 80%, rgba(var(--deep-purple), .3));
 }
 
 #svg {
@@ -61,7 +67,7 @@ body {
 }
 
 #hero {
-    color: var(--light-text);
+    color: rgb(var(--white-smoke));
     font-size: 2rem;
     font-family: 'open sans', sans-serif;
     text-align: left;
@@ -79,56 +85,51 @@ body {
 .info-container {
     padding: 5% 5%;
     flex-grow: 1;
-    flex-basis: 40%;
+    flex-basis: 30%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: stretch;
+    background-color: rgb(var(--white-smoke));
 }
 
 
 .prompt {
     font-size: 1.5rem;
     font-weight: 300;
-    color: var(--dark-text)
+    color: rgb(var(--black-charcoal))
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-    gap: 2rem;
+    max-width: 65rem;
+    padding: 0 1rem;
 }
 
 #main-form-container {
-    flex-grow: 1;
     display: grid;
-    border-style: none;
-    padding-left: 0;
-
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+    grid-gap: 1rem;
 }
-
-@media (min-width: 600px) {
-    #main-form-container { grid-template-columns: repeat(2, 1fr); }
-  }
 
 fieldset {
     border-style: none;
-    padding-left: 0;
+}
 
+label {
+    color: rgb(var(--black-charcoal))
 }
 
 input {
     border-style: solid;
     border-radius: 5px;
     border-width: 1px;
-    border-color: rgba(0,0,0,1)
+    border-color: rgb(var(--black-charcoal))
 }
 
 input:focus {
     border-color: var(--light-purple);
-    box-shadow: 2px 2px 2px 1px #9617b6;
+    border-width: 1px;
+    box-shadow: 0px 2px 2px 1px rgb(var(--dark-magenta));
 }
 
 input:invalid {
@@ -150,15 +151,15 @@ button {
     width: max(200px, 5%);
     height: min(3rem, 50px);
     border-radius: 10px;
-    background-color: #150010;
-    color: var(--light-text);
+    background-color: rgb(var(--dark-magenta));
+    color: rgb(var(--white-smoke));
     font-size: 1.5rem;
     font-weight: bold;
-    box-shadow: -3px 3px var(--light-purple);
+    box-shadow: -3px 3px 2px 2px rgb(var(--deep-purple));
     border-style: none;
     margin-left: 3%;
 }
 
 button:hover {
-    color: var(--light-purple);
+    transform: scale(1.1);
 }
