@@ -53,6 +53,8 @@ body {
 }
 
 .logo-container {
+    position: relative;
+    bottom: 20%;
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -113,9 +115,14 @@ form {
 
 fieldset {
     border-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: .25rem;
 }
 
 label {
+    font-size: 1.2rem;
     color: rgb(var(--black-charcoal))
 }
 
@@ -123,7 +130,8 @@ input {
     border-style: solid;
     border-radius: 5px;
     border-width: 1px;
-    border-color: rgb(var(--black-charcoal))
+    border-color: rgb(var(--black-charcoal));
+    max-width: 75%;
 }
 
 input:focus {
@@ -132,19 +140,24 @@ input:focus {
     box-shadow: 0px 2px 2px 1px rgb(var(--dark-magenta));
 }
 
-input:invalid {
-    border-color: red;
+input:disabled {
+    border-color: lightgrey;
 }
-
-input:valid {
-}
-
-
 
 .validation {
+    font-size: .9rem;
     margin: 0;
-    padding-top: 3px;
+    color: red;
 }
+
+
+/* Custom class added by script */
+.invalid {
+    border-color: red;
+    color: red;
+}
+/*                           */
+
 
 button {
     /* Button Styling */
@@ -157,7 +170,7 @@ button {
     font-weight: bold;
     box-shadow: -3px 3px 2px 2px rgb(var(--deep-purple));
     border-style: none;
-    margin-left: 3%;
+    margin: 6% 2%;
 }
 
 button:hover {

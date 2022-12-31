@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <title>Sign-Up Form</title>
 </head>
 <body>
@@ -33,67 +33,96 @@
                 <br>
                 Let an experienced professional take care of the details; 
                 you supply the effort.
-                
             </p>
 
             <form action="index.html" method="get">
-                <fieldset id="main-form-container">
+                <div id="main-form-container">
 
                         <fieldset>
                             <label for="firstName">First Name</label>
-                            <br>
-                            <input id="firstName" name="firstName" type="text"
-                            pattern="[A-za-z]{2,}">
-                            <br>
-                            <p class="firstName, validation">Validation</p>
+
+                            <input id="firstName" 
+                            name="firstName" 
+                            type="text"
+                            pattern="[A-za-z]{2,}"
+                            data-errormsg="Enter a name composed of 2 or more letters"
+                            required>
+
+                            <p class="firstName validation">&nbsp</p>
                         </fieldset>
 
                         <fieldset>
-                            <label for="lastName">Last Name</label><br>
-                            <input id="lastName" name="lastName" type="text"
-                            pattern="[A-za-z]{2,}">
-                            <p class="lastName, validation">Validation</p>
+                            <label for="lastName">Last Name</label>
+
+                            <input id="lastName" 
+
+                            name="lastName" 
+                            type="text"
+                            pattern="[A-za-z]{2,}" 
+                            data-errormsg="Enter a name composed of 2 or more letters"
+                            required>
+
+                            <p class="lastName validation">&nbsp</p>
                         </fieldset>
 
                         <fieldset>
                             <label for="email">Email</label>
-                            <br>
-                            <input id="email" name="email" type="email">
-                            <br>
-                            <p class="email, validation">Validation</p>
+
+                            <input id="email" 
+                            name="email" 
+                            type="email" 
+                            placeholder="you@example.com"
+                            data-errormsg="Please enter a valid email address"
+                            required>
+
+                            <p class="email validation">&nbsp</p>
                         </fieldset>
 
                         <fieldset>
                             <label for="phone">Phone</label>
-                            <br>
-                            <input id="phone" name="phone" type="tel"
-                            pattern="">
-                            <br>
-                            <p class="phone, validation">Validation</p>
+
+                            <input id="phone" 
+                            name="phone" 
+                            type="tel"
+                            pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$" 
+                            placeholder="555-555-5555"
+                            data-errormsg="Please enter a valid 10 digit phone number"
+                            required>
+
+                            <p class="phone validation">&nbsp</p>
                         </fieldset>
 
                         <fieldset>
                             <label for="password">Password</label>
-                            <br>
-                            <input id="password" name="password" type="text"
-                            pattern="{8,15}">
-                            <br>
-                            <p class="password, validation">Validation</p>
+
+                            <input id="password" 
+                            name="password" 
+                            type="password"
+                            pattern=".{8,15}" 
+                            placeholder="8-15 characters"
+                            data-errormsg="Password must be between 8-15 characters"
+                            required>
+
+                            <p class="password validation">&nbsp</p>
                         </fieldset>
 
                         <fieldset>
                             <label for="password2">Confirm Password</label>
-                            <br>
-                            <input id="password2" type="text"
-                            pattern="/{8, 15}/">
-                            <br>
-                            <p class="password2, validation">Validation</p>
+
+                            <input id="password2" 
+                            type="password"
+                            pattern=".{8, 15}" 
+                            data-errormsg="Passwords do not match"
+                            required>
+
+                            <p class="password2 validation">&nbsp</p>
                         </fieldset>
 
-                </fieldset>
+                </div>
 
                 <button type="submit">SIGN UP</button>
             </form>
+
         </div>
     </div> 
     
